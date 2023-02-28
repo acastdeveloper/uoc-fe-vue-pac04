@@ -1,0 +1,38 @@
+/* DARK THEME SELECTOR */
+#switcher {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#tracker {
+  background: var(--darkc2);
+  border-top: 1px solid var(--darkc1);
+  border-bottom: 1px solid var(--lightc1);
+  display: block;
+  height: 1.2rem;
+  width: 2rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  position: relative;
+}
+
+#ball {
+  position: absolute;
+  top: 0.05rem;
+  right: 1rem;
+  background: yellow;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  box-shadow: 0 0 0.5rem yellow;
+}
+
+#ball.dark,
+body[data-theme="dark"] #ball {
+  transform: translate(1rem);
+  background: black;
+  border-right: 0.2rem solid var(--lightc1);
+}
